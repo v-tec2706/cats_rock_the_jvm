@@ -68,7 +68,7 @@ object DataValidations extends App {
       Validated.fromOption(value, List(s"field: $fieldName - must not be empty"))
 
     def isNotBlank(value: String, fieldName: String): FormValidation[String] =
-      Validated.cond(!value.isBlank , value, List(s"field: $fieldName cannot be blank"))
+      Validated.cond(value.nonEmpty , value, List(s"field: $fieldName cannot be blank"))
 
     def isValidEmail(value: String): FormValidation[String] =
       Validated.cond(value.contains('@'), value, List("email must containt `@`"))
