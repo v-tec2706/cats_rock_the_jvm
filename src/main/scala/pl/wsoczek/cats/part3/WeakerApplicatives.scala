@@ -2,7 +2,7 @@ package pl.wsoczek.cats.part3
 
 import cats.{Functor, Semigroupal}
 
-object Applies extends App {
+object WeakerApplicatives extends App {
   // Apply - weaker form of applicatives
   trait MyApply[W[_]] extends Functor[W] with Semigroupal[W] {
     override def product[A, B](fa: W[A], fb: W[B]): W[(A, B)] = {
