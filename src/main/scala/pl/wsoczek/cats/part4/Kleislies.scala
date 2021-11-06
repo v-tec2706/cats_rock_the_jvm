@@ -32,7 +32,7 @@ object Kleislies extends App {
 
   val times2 = Kleisli[Id, Int, Int](x => x * 2)
   val plus4 = Kleisli[Id, Int, Int](y => y + 4)
-  val com posed = times2.flatMap(t2 => plus4.map(p4 => t2 + p4))
+  val composed = times2.flatMap(t2 => plus4.map(p4 => t2 + p4))
   val composedFor = for {
     t2 <- times2
     p4 <- plus4
