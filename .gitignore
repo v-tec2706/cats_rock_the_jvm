@@ -44,6 +44,8 @@ bin/
 #general
 *.class
 # Project exclude paths
+/.bsp
+/.idea
 /project/target/
 /target/
 /target/scala-2.13/classes/
