@@ -1,7 +1,9 @@
-name := "cats_rock_the_jvm"
+name := "rock-the-jvm-cats"
 
 version := "0.1"
 
-scalaVersion := "2.13.6"
+scalaVersion := "2.13.7"
 
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.6.1"
+libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-effect" % "3.2.0",
+)
