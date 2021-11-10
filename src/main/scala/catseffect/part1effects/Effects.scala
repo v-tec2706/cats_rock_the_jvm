@@ -1,4 +1,4 @@
-package part1effects
+package catseffect.part1effects
 
 import scala.io.StdIn
 

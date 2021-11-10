@@ -1,4 +1,4 @@
-package part1effects
+package catseffect.part1effects
 
 import cats.Parallel
 import cats.effect.IO.Par
