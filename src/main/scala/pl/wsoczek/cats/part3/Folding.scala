@@ -1,7 +1,7 @@
 package pl.wsoczek.cats.part3
 
 import cats.{Eval, Monoid}
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode
+//import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode
 
 object Folding extends App {
   // Task 1 - implement all methods form ListExercises in term of foldLeft
