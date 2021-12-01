@@ -4,7 +4,6 @@ import cats.effect.kernel.Async
 import cats.{Applicative, Monad}
 import cats.effect.{IO, IOApp, MonadCancel, Poll}
 import utils.DebugWrapper
-import utils.utils2.DebugWrapper
 
 import scala.concurrent.duration.{DurationInt, FiniteDuration}
 
@@ -37,8 +36,8 @@ object PolymorphicCancellation extends IOApp.Simple {
   import cats.syntax.flatMap._
   import cats.instances.string._
 
-//  def unsafeSleep[F[_], E](duration: FiniteDuration)(implicit mc: MonadCancel[F, E]): F[Unit] =
-//    mc.pure(Thread.sleep(duration.toMillis))
+  def unsafeSleep[F[_], E](duration: FiniteDuration)(implicit mc: MonadCancel[F, E]): F[Unit] =
+    mc.pure(Thread.sleep(duration.toMillis))
 //
 //  def inputPassword[F[_], E](a: String)(implicit monadCancel: MonadCancel[F, E]): F[String] = for {
 //    _ <- monadCancel.pure("Input password: ").debug2
