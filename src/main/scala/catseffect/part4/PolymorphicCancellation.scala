@@ -33,10 +33,10 @@ object PolymorphicCancellation extends IOApp.Simple {
 
 
   // Task: Generalize a piece of code
-//  import cats.syntax.functor._
-//  import cats.syntax.monad._
-//  import cats.instances.string._
-//
+  import cats.syntax.functor._
+  import cats.syntax.flatMap._
+  import cats.instances.string._
+
 //  def unsafeSleep[F[_], E](duration: FiniteDuration)(implicit mc: MonadCancel[F, E]): F[Unit] =
 //    mc.pure(Thread.sleep(duration.toMillis))
 //
